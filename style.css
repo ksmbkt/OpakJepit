@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77ab59 3px solid;
+}
+
+header h1 {
+    float: left;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 5px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+header nav ul li a:hover {
+    background: #77ab59;
+}
+
+.section {
+    padding: 20px 0;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.history-content {
+    text-align: justify;
+}
+
+.history-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.history-images img {
+    max-width: 100%;
+    border-radius: 10px;
+    flex: 1 1 calc(50% - 20px);
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+    margin: 20px 0;
+}
+
+button {
+    background: #77ab59;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #55933d;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .header h1, .header nav {
+        float: none;
+        text-align: center;
+    }
+
+    .header nav ul {
+        text-align: center;
+    }
+
+    .header nav ul li {
+        display: block;
+        margin: 0;
+    }
+
+    .history-images img, .product-item {
+        width: calc(100% - 40px);
+    }
+}
