@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMKM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>UMKM Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="#history">Sejarah</a></li>
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="history" class="section">
+        <div class="container">
+            <h2>Sejarah</h2>
+            <div class="history-content">
+                <p>Produk Opak Gapit pertama kali diperkenalkan ke pasar pada tahun 2012 oleh seorang ibu rumah tangga yang memiliki visi untuk menambah pemasukan keluarga. Terinspirasi dari kampung halamannya di Blitar, kota yang dikenal dengan produksi Opak Gapit sebagai oleh-oleh khas, sang produsen mulai mempelajari dan menyempurnakan cara pembuatannya.</p>
+                <p>Pada awalnya, produksi Opak Gapit dilakukan secara sederhana dan hanya menerima pesanan saat ada perayaan besar seperti Idul Fitri. Namun, dalam dua tahun terakhir, permintaan untuk Opak Gapit meluas ke berbagai acara lainnya, termasuk pernikahan dan acara keluarga lainnya.</p>
+                <p>Meskipun belum diproduksi secara massal, produk Opak Gapit kini dapat ditemukan di beberapa toko di pasar dan toko oleh-oleh di sekitar Pacet, Mojokerto. Seiring dengan berkembangnya usaha, produsen mulai memperluas variasi produk dengan menambahkan Kembang Goyang dan Carang Mas ke dalam daftar produksi mereka.</p>
+                <p>Dengan dedikasi dan semangat yang tinggi, usaha ini terus berkembang, menjadi salah satu pilihan oleh-oleh yang digemari di kawasan tersebut.</p>
+                <div class="history-images">
+                    <img src="Photo Sejarah 1.jpg" alt="Sejarah 1">
+                    <img src="Photo Sejarah 2.jpg" alt="Sejarah 2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="section">
+        <div class="container">
+            <h2>Produk Kami</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="Produk.jpeg" alt="Opak Gapit">
+                    <h3>Opak Gapit</h3>
+                    <p>Rp 4.500,00 - Rp 8.500,00</p>
+                </div>
+                <div class="product-item">
+                    <img src="Produk.jpeg" alt="Carang Mas">
+                    <h3>Product 2</h3>
+                    <p>Deskripsi singkat produk 2...</p>
+                </div>
+                <div class="product-item">
+                    <img src="Produk.jpeg" alt="Kembang Goyang">
+                    <h3>Product 3</h3>
+                    <p>Deskripsi singkat produk 3...</p>
+                </div>
+                <!-- Add more product items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Kontak Kami</h2>
+            <div class="contact-info">
+                <p>Alamat: Jl. </p>
+                <div id="map"></div>
+                <button onclick="location.href='https://wa.me/082131717063'">Pesan Sekarang</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 UMKM Anda. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function initMap() {
+            var location = {lat: -7.633405, lng: 112.557465}; // Update with your location
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCorv2VFxwhp9VBNXX-UUdLgBpt04nY99s&callback=initMap">
+    </script>
+</body>
+</html>
