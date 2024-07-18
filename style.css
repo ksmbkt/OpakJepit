@@ -1,12 +1,14 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
     line-height: 1.6;
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
 }
@@ -14,15 +16,16 @@ body {
 header {
     background: #333;
     color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
+    padding: 10px 0;
     border-bottom: #77ab59 3px solid;
 }
 
 header h1 {
     display: flex;
     align-items: center;
-    float: left;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 header h1 .logo {
@@ -31,7 +34,7 @@ header h1 .logo {
 }
 
 header nav {
-    float: right;
+    text-align: center;
     margin-top: 10px;
 }
 
@@ -51,6 +54,7 @@ header nav ul li a {
     text-decoration: none;
     padding: 5px 20px;
     border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
 header nav ul li a:hover {
@@ -59,15 +63,22 @@ header nav ul li a:hover {
 
 .section {
     padding: 20px 0;
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .section h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #77ab59;
+    font-size: 24px;
 }
 
 .history-content {
     text-align: justify;
+    padding: 20px;
 }
 
 .history-images {
@@ -89,15 +100,24 @@ header nav ul li a:hover {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    padding: 20px;
 }
 
 .product-item {
-    background: #f4f4f4;
+    background: #fff;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: calc(33.333% - 40px);
-    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
 }
 
 .product-item img {
@@ -107,6 +127,7 @@ header nav ul li a:hover {
 
 .contact-info {
     text-align: center;
+    padding: 20px;
 }
 
 #map {
@@ -122,6 +143,7 @@ button {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
 button:hover {
@@ -133,6 +155,8 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    margin-top: 20px;
+    border-top: #77ab59 3px solid;
 }
 
 @media (max-width: 768px) {
@@ -147,10 +171,14 @@ footer {
 
     header nav ul li {
         display: block;
-        margin: 0;
+        margin: 5px 0;
     }
 
     .history-images img, .product-item {
         width: calc(100% - 40px);
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
     }
 }
